@@ -1,0 +1,12 @@
+#! /bin/bash
+net_if="$(ifconfig)"
+
+#Turns all network interfaces off
+while [ -n "$net_if" ]; do
+	t="$(echo $net_if | awk '{print $1}')"
+	ifconfig $t down	
+	net_if="$(ifconfig)"
+done
+
+#Starts powertop
+powertop

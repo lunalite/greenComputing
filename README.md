@@ -8,4 +8,3 @@ Possible independent variables:
 - number of for loops
 - number of nested loops
 - I/O reads
-- 
